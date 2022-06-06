@@ -1,10 +1,10 @@
 업데이트 날짜 2022.06.06
 
-### 안드로이드 Comopse 사용 시 화면 이동 방법
+## 안드로이드 Comopse 사용 시 화면 이동 방법
 
 Android Developers : [Android Compose Navigation](https://developer.android.com/jetpack/compose/navigation)
 
-### 라이브러리 추가
+## 라이브러리 추가
 ```
 dependencies {
     def nav_version = "2.4.2"
@@ -14,13 +14,13 @@ dependencies {
 ```
 별도로 [rememberAnimatedNavController](https://google.github.io/accompanist/navigation-animation/) Animation을 활용한 Navigation도 있다.
 
-### NavController를 생성
+## NavController를 생성
 ```kt
 val navController = rememberNavController()
 ```
 navController는 Compose에서 naviation할 때 사용하느 컴퍼넌트로 화면 전황, 스택 관리 등을 진행 한다. Compose앱 내부에서 화면을 이동 할 때는 navConterller를 참조 해야한다.
 
-### NacHost 생성
+## NacHost 생성
 ```kt
 NavHost(navController = navController, startDestination = startDestination) {
     composable(startDestination) { Compoable() }
@@ -30,7 +30,7 @@ NavHost(navController = navController, startDestination = startDestination) {
 아까 생성한 navController를 주입하고 startDestination을 설정하여 생성 할 수 있다.
 composable에 route 형태로 화면 이동을 관리한다.
 
-## NavGraph 분활
+### NavGraph 분활
 NavHost의 그래프를 분활 하여 작업 할 수 있기 떄문에 분활하여 작업하는 방법으 추천한다
 ```kt
 fun NavGraphBuilder.subPage(navController: NavController){
@@ -54,7 +54,8 @@ sealed class Screen(val route : String){
 }
 ```
 
-### 화면 이동 방법
+## 화면 이동 방법
+
 @Composable
 fun MainScreen(navController: NavController) {
     Button(onClick = { navController.navigate("MainScreen2") }) {
@@ -65,7 +66,7 @@ fun MainScreen(navController: NavController) {
 생성해 두었던 navController를 이용하여 `navigate` 함수를 사용해 원하는 route로 이동 할 수 있다.
 화면 이동 후 백스택의 화면을 Pop하기 위해 `popUpTo(route)`를 추가 할 수 있다.
 
-### 화면 이동 시 데이터 전달
+## 화면 이동 시 데이터 전달
 route에 인자를 추가하여 데이터를 전달 할 수 있다.
 ```kt
 NavHost(startDestination = "MainScreen/{userId}") {
