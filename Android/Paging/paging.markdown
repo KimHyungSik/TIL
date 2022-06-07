@@ -1,4 +1,4 @@
-업데이트 날짜 2022.06.07
+업데이트 날짜 2022.06.08
 ## Paging
 Android developers : [Paging3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview?hl=ko)
 
@@ -116,3 +116,4 @@ vm.bookListLiveData.observe(viewLifecycleOwner) { pagingData ->
 - NestedScrollView 와 혼용해서 사용 할 수 없다.(NestedScrollView가 데이터를 미리 다 호출 해버려서 그런듯)
 - RecyclerView 에서 item에 접근하기위해서는 `getItem(position)`을 사용 한다.
 - 테스트 코드 작성시에는 `PagingData.from(list)` 방식으로 데이터를 만들어 넣을 수 있다.
+-`pagingAdapter.refresh()` 함수로 리플레쉬 할 수 있
