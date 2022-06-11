@@ -1,4 +1,5 @@
 업데이트 날짜 2022.06.08
+Blog : https://medium.com/p/a72b6075e57e
 ## Paging
 Android developers : [Paging3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview?hl=ko)
 
