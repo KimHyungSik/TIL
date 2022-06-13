@@ -31,16 +31,22 @@ git flow 명령어를 사용하여 git flow 흐름데로 정의하는 방법
 ## git flow 사용
 
 먼저 git flow를 초기화 시켜준다.
+
 <img width="487" alt="스크린샷 2022-06-13 오후 10 37 21" src="https://user-images.githubusercontent.com/54847106/173366121-3518c2e7-8c99-4c8a-9cf8-4f87f410588d.png">
+
 그러면 gitflow에 사용할 브랜치명을 지정할 수 있다. 엔터키로 기본값 사용이 가능 하다(-d 옵션으로 바로 생성할 수 도 있다)
 
 다음 기능 개발을 위해 feature 브랜치를 생성해야한다. 
+
 ![스크린샷 2022-06-13 오후 10 41 03](https://user-images.githubusercontent.com/54847106/173366791-0f93433d-2e50-4cbc-bdeb-7ef75308534b.png)
+
 ```git flow feature start <branch name>```
 명령어를 통해 feature를 시작 할 수 있으며 checkout 까지 바로 해주는 걸 알 수있다.
 
 이후 작업이 완료되면 feature를 종료 할 수 있다.
+
 ![스크린샷 2022-06-13 오후 10 48 01](https://user-images.githubusercontent.com/54847106/173368140-dea090c9-2508-473a-89b6-991cb5b39a25.png)
+
 ```git flow feature finish <branch name>```
 명령어로 feature를 종료시키고 develop에 병합 할 수 있다.
 
@@ -51,7 +57,9 @@ git hub에 push 하기 위해서는
 을 통해 브랜치르 가져 올수 있다.
 
 기능 개발이 완료되고 앱을 배포하기 위해 release 브랜치를 사용하게되는데 
+
 ![스크린샷 2022-06-13 오후 10 52 41](https://user-images.githubusercontent.com/54847106/173369078-7bab1f4a-54f4-4af5-afc8-a5ca88154f9e.png)
+
 ```git flow release <branch name>```
 명령어를 통해 생성 가능하다.
 
