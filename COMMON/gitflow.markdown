@@ -87,6 +87,8 @@ Finish 사용시 가장 먼저 확인할 수 있는 화면은 master브랜치와
 3. release 브랜치를 develop 브랜치에 병합한다.
 4. release 브랜치르 삭제한다.
 
+추가적으로 feature 에도 병합 된다
+
 <img width="454" alt="스크린샷 2022-06-13 오후 11 10 24" src="https://user-images.githubusercontent.com/54847106/173372790-22c2e569-6416-4d41-922e-4bbebb66d9b2.png">
 
 hotfix의 경우 release 사용과 유사하다.
